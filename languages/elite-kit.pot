@@ -1,0 +1,173 @@
+# Copyright (C) 2023 Themexplosion
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Elite Kit Elementor Addons 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/elite-kit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-08-28T00:05:18+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: elite-kit\n"
+
+#. Plugin Name of the plugin
+msgid "Elite Kit Elementor Addons"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/elite-kit/"
+msgstr ""
+
+#. Description of the plugin
+msgid "The Elite plugin you install after Elementor plugin. It adds a lot of new Elementor widgets to the Elementor Page Builder. Backed by the power of Elite Kit Framework. Highly optimized for super fast loading and instant Live editing."
+msgstr ""
+
+#. Author of the plugin
+msgid "Themexplosion"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://themexplosion.com"
+msgstr ""
+
+#: elite-kit.php:113
+msgid "Elite Kit requires Elementor plugin to be installed and activated."
+msgstr ""
+
+#: elite-kit.php:129
+msgid "Elite Kit requires Elementor plugin version 3.15.3 or greater."
+msgstr ""
+
+#: elite-kit.php:146
+msgid "Elite Kit requires PHP version 7.4 or greater."
+msgstr ""
+
+#: elite-kit.php:166
+msgid "Elite Kit Widgets"
+msgstr ""
+
+#: widgets/Team.php:15
+msgid "Team"
+msgstr ""
+
+#: widgets/Team.php:34
+msgid "Member Information"
+msgstr ""
+
+#: widgets/Team.php:42
+msgid "Choose Image"
+msgstr ""
+
+#: widgets/Team.php:66
+msgid "Name"
+msgstr ""
+
+#: widgets/Team.php:68
+msgid "Elite Kit Name"
+msgstr ""
+
+#: widgets/Team.php:76
+#: widgets/Team.php:229
+#: widgets/Team.php:374
+msgid "Designation"
+msgstr ""
+
+#: widgets/Team.php:78
+msgid "Elite Kit Officer"
+msgstr ""
+
+#: widgets/Team.php:86
+#: widgets/Team.php:257
+msgid "Description"
+msgstr ""
+
+#: widgets/Team.php:89
+msgid "Write something amazing the elit kit member"
+msgstr ""
+
+#: widgets/Team.php:98
+msgid "Social Profile"
+msgstr ""
+
+#: widgets/Team.php:108
+#: widgets/Team.php:317
+#: widgets/Team.php:426
+msgid "Social Icon"
+msgstr ""
+
+#: widgets/Team.php:116
+msgid "Social Website Name"
+msgstr ""
+
+#: widgets/Team.php:125
+msgid "URL"
+msgstr ""
+
+#: widgets/Team.php:134
+msgid "Soicial Icons"
+msgstr ""
+
+#: widgets/Team.php:139
+msgid "Facebook"
+msgstr ""
+
+#: widgets/Team.php:147
+msgid "Twitter"
+msgstr ""
+
+#: widgets/Team.php:155
+msgid "Instagram"
+msgstr ""
+
+#: widgets/Team.php:163
+msgid "Behance"
+msgstr ""
+
+#: widgets/Team.php:182
+msgid "Member style"
+msgstr ""
+
+#: widgets/Team.php:194
+msgid "Normal"
+msgstr ""
+
+#: widgets/Team.php:201
+#: widgets/Team.php:354
+msgid "Member Name"
+msgstr ""
+
+#: widgets/Team.php:210
+#: widgets/Team.php:238
+#: widgets/Team.php:266
+#: widgets/Team.php:363
+#: widgets/Team.php:383
+msgid "Text Color"
+msgstr ""
+
+#: widgets/Team.php:285
+#: widgets/Team.php:394
+msgid "Meta"
+msgstr ""
+
+#: widgets/Team.php:294
+#: widgets/Team.php:403
+msgid "Background Color"
+msgstr ""
+
+#: widgets/Team.php:305
+#: widgets/Team.php:414
+msgid "Padding"
+msgstr ""
+
+#: widgets/Team.php:326
+#: widgets/Team.php:435
+msgid "Icon Color"
+msgstr ""
+
+#: widgets/Team.php:347
+msgid "Hover"
+msgstr ""
