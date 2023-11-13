@@ -465,24 +465,24 @@ class Team extends Widget_Base
                 </div>
                 <div class="team-holder  text-center absolute  -bottom-[40px] left-[30px] right-[30px]  overflow-hidden pt-[17px] pr-[15px] pb-[17px] pl-[15px]">
                     <?php if ($settings['member_name']) : ?>
-                        <h3 class="team-title text-[22px] leading-[26px] mb-[2px]"> <?php echo esc_html__($settings['member_name'], 'elite-kit'); ?> </h3>
+                        <h3 class="team-title text-[22px] leading-[26px] mb-[2px]"> <?php echo esc_html($settings['member_name'], 'elite-kit'); ?> </h3>
                     <?php endif ?>
                     <?php if ($settings['member_designation']) : ?>
                         <div class="team-position">
-                            <span class="font-[15px] loading-normal inline-block"> <?php echo esc_html__($settings['member_designation'], 'elite-kit'); ?></span>
+                            <span class="font-[15px] loading-normal inline-block"> <?php echo esc_html($settings['member_designation'], 'elite-kit'); ?></span>
                         </div>
                     <?php endif ?>
                     <?php if ($settings['member_description'] || $settings['member_social_icons']) : ?>
                         <div class="team-meta ">
                             <?php if ($settings['member_description']) :?>
                                 <div class="team-description">
-                                    <span class="text-[14px] block leading-[22px] mt-[8px] mb-[12px]"><?php echo esc_html__($settings['member_description'], 'elite-kit'); ?></span>
+                                    <span class="text-[14px] block leading-[22px] mt-[8px] mb-[12px]"><?php echo esc_html($settings['member_description'], 'elite-kit'); ?></span>
                                 </div>
                             <?php endif ?>
                             <?php if ($settings['member_social_icons']) : ?>
                                 <div class="social-item">
                                     <?php foreach ($settings['member_social_icons'] as $item) : ?>
-                                        <a class="mt-0 mb-0 ml-[6px] mr-[6px] inline-block text-[16px] no-underline" href="<?php echo esc_attr__($item['social_link']); ?>" target='_blank'><?php \Elementor\Icons_Manager::render_icon($item['social_icon'], array( 'aria-hidden' => 'true' )); ?></a>
+                                        <a class="mt-0 mb-0 ml-[6px] mr-[6px] inline-block text-[16px] no-underline" href="<?php echo esc_attr($item['social_link']); ?>" target='_blank'><?php \Elementor\Icons_Manager::render_icon($item['social_icon'], array( 'aria-hidden' => 'true' )); ?></a>
                                     <?php endforeach ?>
                                 </div>
                             <?php endif ?>
