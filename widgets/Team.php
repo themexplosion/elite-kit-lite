@@ -52,7 +52,6 @@ class Team extends Widget_Base {
 			\Elementor\Group_Control_Image_Size::get_type(),
 			[
 				'name'    => 'image',
-				// Usage: `{name}_size` and `{name}_custom_dimension`, in this case `thumbnail_size` and `thumbnail_custom_dimension`.
 				'exclude' => [
 					'width'  => '',
 					'height' => '',
@@ -133,7 +132,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'member_social_icons',
 			[
-				'label'       => esc_html__( 'Soicial Icons', 'elite-kit' ),
+				'label'       => esc_html__( 'Social Icons', 'elite-kit' ),
 				'type'        => \Elementor\Controls_Manager::REPEATER,
 				'fields'      => $repeater->get_controls(),
 				'default'     => [

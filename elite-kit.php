@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-final class Elite_Kit {
+final class EliteKit {
 
 	const VERSION                   = '1.0.0';
 	const MINIMUM_ELEMENTOR_VERSION = '3.15.3';
@@ -224,8 +224,7 @@ final class Elite_Kit {
 	 *
 	 */
 	public function enqueue_widget_styles() {
-		wp_enqueue_style( 'elite-kit-main', plugins_url( 'assets/css/main.css', __FILE__ ), array(), self::VERSION );
-		wp_enqueue_style( 'elite-kit-widget', plugins_url( 'assets/css/widget.css', __FILE__ ), array(), self::VERSION );
+        wp_enqueue_style( 'elite-kit-widget', plugins_url( 'assets/css/widget.css', __FILE__ ), array(), self::VERSION );
 	}
 
 
@@ -270,6 +269,6 @@ final class Elite_Kit {
 }
 
 /**
- * Main instance of Elite_Kit.
+ * Main instance of EliteKit.
  */
-Elite_Kit::instance();
+EliteKit::instance();
