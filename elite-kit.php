@@ -19,7 +19,6 @@ defined( 'ABSPATH' ) || exit;
 
 final class Elite_Kit {
 
-
 	const VERSION                   = '1.0.0';
 	const MINIMUM_ELEMENTOR_VERSION = '3.15.3';
 	const MINIMUM_PHP_VERSION       = '7.4';
@@ -273,16 +272,4 @@ final class Elite_Kit {
 /**
  * Main instance of Elite_Kit.
  */
-function elite_kit_kickoff() {
-	return Elite_Kit::instance();
-}
-
-// Run the plugin.
-elite_kit_kickoff();
-
-// TODO: Add tailwindcss, configure .gitignore file
-// TODO: Finish the team widget, use 2/3 styles for team
-// TODO: Use 2/3 hero sections
-// TODO: Use 2/3 blog sections
-// TODO: Finish readme.txt @arafat
-// TODO: Upload the plugin @arafat
+Elite_Kit::instance();
