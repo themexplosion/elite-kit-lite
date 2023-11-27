@@ -9,11 +9,10 @@
  * License:           GPL v2 or later
  * Text Domain:       elite-kit
  * Domain Path:       /languages/
-
  * WC tested up to: 8.0.2
  * Elementor tested up to: 3.15.3
  * Elementor Pro tested up to: 3.15.1
-*/
+ */
 
 defined( 'ABSPATH' ) || exit;
 
@@ -27,14 +26,6 @@ final class EliteKit {
 		$this->init_plugin();
 		load_plugin_textdomain( 'elite-kit', false, plugin_basename( __DIR__ ) . '/languages' );
 		$this->core_includes();
-	}
-
-	public static function instance() {
-		static $instance = false;
-
-		if ( ! $instance ) {
-			$instance = new self();
-		}
 	}
 
 	/**
@@ -102,21 +93,6 @@ final class EliteKit {
 		wp_enqueue_style( 'elite-kit-admin', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), self::VERSION );
 	}
 
-		/**
-	 * Check if a plugin is installed
-	 *
-	 */
-
-	public function is_plugin_installed( $basename ) {
-		if ( ! function_exists( 'get_plugins' ) ) {
-			include_once ABSPATH . '/wp-admin/includes/plugin.php';
-		}
-
-		$installed_plugins = get_plugins();
-
-		return isset( $installed_plugins[ $basename ] );
-	}
-
 	/**
 	 * Admin notice
 	 *
@@ -128,24 +104,43 @@ final class EliteKit {
 			return;
 		}
 
-		$elementor = 'elementor/elementor.php';
+		if ( $this->is_plugin_installed( 'elementor/elementor.php' ) ) {
+			$activation_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=elementor/elementor.php&amp;plugin_status=all&amp;paged=1&amp;s', 'activate-plugin_elementor/elementor.php' );
 
-		if ( $this->is_plugin_installed( $elementor ) ) {
-			$activation_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=' . $elementor . '&amp;plugin_status=all&amp;paged=1&amp;s', 'activate-plugin_' . $elementor );
-
-			$message = sprintf( __( '%1$s Elite Kit Addons for Elementor%2$s requires %1$sElementor%2$s plugin to be active. Please activate Elementor to continue.', 'elite-kit' ), '<strong>', '</strong>' );
+			$message = __( 'Elite Kit Addons for Elementor requires Elementor plugin to be active. Please activate Elementor to continue.', 'elite-kit' );
 
 			$button_text = __( 'Activate Elementor', 'elite-kit' );
 		} else {
 			$activation_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=elementor' ), 'install-plugin_elementor' );
 
-			$message     = sprintf( __( '%1$s Elite Kit Addons for Elementor %2$s requires %1$s Elementor %2$s plugin to be installed and activated. Please install Elementor to continue.', 'elite-kit' ), '<strong>', '</strong>' );
+			$message     = __( 'Elite Kit Addons for Elementor  requires Elementor  plugin to be installed and activated. Please install Elementor to continue.', 'elite-kit' );
 			$button_text = __( 'Install Elementor', 'elite-kit' );
 		}
+		?>
 
-		$button = '<p><a href="' . esc_url( $activation_url ) . '" class="button-primary">' . esc_html( $button_text ) . '</a></p>';
+		<div class="error">
+			<p><?php echo esc_html( $message ); ?></p>
+			<p>
+				<a href="<?php echo esc_url( $activation_url ); ?>" class="button-primary">
+					<?php echo esc_html( $button_text ); ?>
+				</a>
+			</p>
+		</div>
+		<?php
+	}
 
-		printf( '<div class="error"><p>%1$s</p>%2$s</div>', $message, $button );
+	/**
+	 * Check if a plugin is installed
+	 *
+	 */
+	public function is_plugin_installed( $basename ) {
+		if ( ! function_exists( 'get_plugins' ) ) {
+			include_once ABSPATH . '/wp-admin/includes/plugin.php';
+		}
+
+		$installed_plugins = get_plugins();
+
+		return isset( $installed_plugins[ $basename ] );
 	}
 
 	/**
@@ -173,11 +168,11 @@ final class EliteKit {
 	 */
 	public function admin_notice_minimum_php_version() {
 		?>
-			<div class="notice notice-warning is-dismissible">
-				<p>
-					<?php esc_html__( 'Elite Kit requires PHP version 7.4 or greater.', 'elite-kit' ); ?>
-				</p>
-			</div>
+		<div class="notice notice-warning is-dismissible">
+			<p>
+				<?php esc_html__( 'Elite Kit requires PHP version 7.4 or greater.', 'elite-kit' ); ?>
+			</p>
+		</div>
 		<?php
 	}
 
@@ -185,6 +180,7 @@ final class EliteKit {
 	 * Register a widget category and move the category to top in the elementor widget panel.
 	 *
 	 * @param \Elementor\Elements_Manager $elements_manager
+	 *
 	 * @return void
 	 */
 	public function register_category_order_to_top( \Elementor\Elements_Manager $elements_manager ) {
@@ -205,11 +201,12 @@ final class EliteKit {
 				$this->categories,
 				function ( $key_one, $key_two ) use ( $category_prefix, $prefix_length ) {
 					if ( substr( $key_one, 0, $prefix_length ) == $category_prefix ) {
-						return -1;
+						return - 1;
 					}
 					if ( substr( $key_two, 0, $prefix_length ) == $category_prefix ) {
 						return 1;
 					}
+
 					return 0;
 				}
 			);
@@ -218,15 +215,13 @@ final class EliteKit {
 		$reorder_cats->call( $elements_manager );
 	}
 
-
 	/**
 	 * Register custom styles after rendering elementor widget
 	 *
 	 */
 	public function enqueue_widget_styles() {
-        wp_enqueue_style( 'elite-kit-widget', plugins_url( 'assets/css/widget.css', __FILE__ ), array(), self::VERSION );
+		wp_enqueue_style( 'elite-kit-widget', plugins_url( 'assets/css/widget.css', __FILE__ ), array(), self::VERSION );
 	}
-
 
 	/**
 	 * Register Widget Scripts
@@ -237,8 +232,6 @@ final class EliteKit {
 	 */
 	public function register_widget_scripts() {
 		wp_enqueue_style( 'elite-kit-elementor-editor', plugins_url( 'assets/css/elementor-editor.css', __FILE__ ) );
-
-		// wp_register_script( 'ajax-chimp', plugins_url( 'assets/vendors/ajax-chimp/ajax-chimp.js', __FILE__ ), array( 'jquery' ), '1.0.0', true ),
 	}
 
 	/**
@@ -264,6 +257,14 @@ final class EliteKit {
 		foreach ( $widgets as $widget ) {
 			$classname = "\EliteKit\Widgets\\$widget";
 			\Elementor\Plugin::instance()->widgets_manager->register( new $classname() );
+		}
+	}
+
+	public static function instance() {
+		static $instance = false;
+
+		if ( ! $instance ) {
+			$instance = new self();
 		}
 	}
 }
