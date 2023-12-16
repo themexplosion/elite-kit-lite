@@ -3,7 +3,7 @@
  * Plugin Name:       Elite Kit Elementor Addons
  * Plugin URI:        https://wordpress.org/plugins/elite-kit/
  * Description:       The Elite plugin you install after Elementor plugin. It adds a lot of new Elementor widgets to the Elementor Page Builder. Backed by the power of Elite Kit Framework. Highly optimized for super fast loading and instant Live editing.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Themexplosion
  * Author URI:        https://themexplosion.com
  * License:           GPL v2 or later
@@ -24,12 +24,11 @@ final class EliteKit {
 
 	public function __construct() {
 		$this->init_plugin();
-	  $this->define_constants();
+		$this->define_constants();
 		load_plugin_textdomain( 'elite-kit', false, plugin_basename( __DIR__ ) . '/languages' );
 		$this->core_includes();
-	  require_once ELITE_KIT_PATH . '/helpers/utils.php';
-
-  }
+		require_once ELITE_KIT_PATH . '/helpers/utils.php';
+	}
 
 	public function define_constants() {
 		define( 'ELITE_KIT_VERSION', self::VERSION );
@@ -46,7 +45,7 @@ final class EliteKit {
 	 * @access private
 	 */
 	private function init_plugin() {
-	  add_action( 'wp_enqueue_scripts', array( $this, 'register_elitekit_dependency_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_elitekit_dependency_scripts' ) );
 		add_action( 'plugins_loaded', array( $this, 'on_plugin_load' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'elite_kit_admin_scripts' ), 11 );
 	}
@@ -115,7 +114,6 @@ final class EliteKit {
 		wp_register_script( 'fontawesome', ELITE_KIT_ASSETS . 'js/all.min.js', array(), '6.4.2 ', true );
 
 		wp_register_style( 'fontawesome-css', ELITE_KIT_ASSETS . 'css/all.min.css', array(), '6.4.2' );
-
 	}
 
 	/**

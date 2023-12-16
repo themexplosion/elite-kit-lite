@@ -4,7 +4,7 @@ Tags: elementor, elements, addons, elementor addons, elementor widget, elementor
 Requires at least: 5.4
 Requires PHP: 7.4
 Tested up to: 6.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,9 @@ Of course! It will work with any theme where Elementor works.
 
 == Changelog ==
 
-= 1.0.0 - 26/08/2023 =
+= 1.0.1 - 16/12/2023 =
+- New: Added new widget "Testimonial"
+- Fixed: CSS conflict with other themes
 
+= 1.0.0 - 15/12/2023 =
 - Initial stable release
