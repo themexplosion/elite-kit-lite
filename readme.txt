@@ -25,6 +25,7 @@ The plugin is optimized for better performance. We follow the best practices to 
 ### FREE WIDGETS
 
 - Team member widget
+- Testimonial widget
 
 More features and improvements are about to be released in future updates.
 
