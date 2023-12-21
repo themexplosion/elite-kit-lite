@@ -2,25 +2,20 @@
 /**
  * Plugin Name:       Elite Kit Elementor Addons
  * Plugin URI:        https://wordpress.org/plugins/elite-kit/
- * Description:       The Elite plugin you install after Elementor plugin. It adds a lot of new Elementor widgets to the Elementor Page Builder. Backed by the power of Elite Kit Framework. Highly optimized for super fast loading and instant Live editing.
- * Version:           1.0.1
- * Author:            Themexplosion
- * Author URI:        https://themexplosion.com
- * License:           GPL v2 or later
- * Text Domain:       elite-kit
- * Domain Path:       /languages/
- * WC tested up to: 8.0.2
- * Elementor tested up to: 3.15.3
- * Elementor Pro tested up to: 3.15.1
+ * Description:       The Elite plugin you install after Elementor plugin. It adds a lot of new Elementor widgets to the Elementor Page Builder. Backed by the power of Elite Kit Framework. Highly
+ * optimized for super fast loading and instant Live editing. Version:           1.0.1 Author:            Themexplosion Author URI:        https://themexplosion.com License:           GPL v2 or later
+ * Text Domain:       elite-kit Domain Path:       /languages/ WC tested up to: 8.0.2 Elementor tested up to: 3.15.3 Elementor Pro tested up to: 3.15.1
  */
 
 defined( 'ABSPATH' ) || exit;
 
 final class EliteKit {
 
-	const VERSION                   = '1.0.0';
+	const VERSION = '1.0.2';
+
 	const MINIMUM_ELEMENTOR_VERSION = '3.15.3';
-	const MINIMUM_PHP_VERSION       = '7.4';
+
+	const MINIMUM_PHP_VERSION = '7.4';
 
 	public function __construct() {
 		$this->init_plugin();
@@ -38,7 +33,6 @@ final class EliteKit {
 		define( 'ELITE_KIT_ASSETS', ELITE_KIT_URL . '/assets/' );
 	}
 
-
 	/**
 	 * Hook into actions and filters.
 	 *
@@ -54,8 +48,7 @@ final class EliteKit {
 	 * Load core files required to run the plugin.
 	 *
 	 */
-	public function core_includes() {
-	}
+	public function core_includes() {}
 
 	/**
 	 * Load the plugin after Elementor (and other plugins) are loaded.
@@ -142,12 +135,12 @@ final class EliteKit {
 		?>
 
 		<div class="error">
-			<p><?php echo esc_html( $message ); ?></p>
-			<p>
-				<a href="<?php echo esc_url( $activation_url ); ?>" class="button-primary">
-					<?php echo esc_html( $button_text ); ?>
-				</a>
-			</p>
+		<p><?php echo esc_html( $message ); ?></p>
+		<p>
+			<a href="<?php echo esc_url( $activation_url ); ?>" class="button-primary">
+				<?php echo esc_html( $button_text ); ?>
+			</a>
+		</p>
 		</div>
 		<?php
 	}
@@ -175,9 +168,9 @@ final class EliteKit {
 	public function admin_notice_minimum_elementor_version() {
 		?>
 		<div class="notice notice-warning is-dismissible">
-			<p>
-				<?php esc_html__( 'Elite Kit requires Elementor plugin version 3.15.3 or greater.', 'elite-kit' ); ?>
-			</p>
+		<p>
+			<?php esc_html__( 'Elite Kit requires Elementor plugin version 3.15.3 or greater.', 'elite-kit' ); ?>
+		</p>
 		</div>
 		<?php
 	}
@@ -192,9 +185,9 @@ final class EliteKit {
 	public function admin_notice_minimum_php_version() {
 		?>
 		<div class="notice notice-warning is-dismissible">
-			<p>
-				<?php esc_html__( 'Elite Kit requires PHP version 7.4 or greater.', 'elite-kit' ); ?>
-			</p>
+		<p>
+			<?php esc_html__( 'Elite Kit requires PHP version 7.4 or greater.', 'elite-kit' ); ?>
+		</p>
 		</div>
 		<?php
 	}
@@ -268,6 +261,7 @@ final class EliteKit {
 	private function include_widgets() {
 		require_once __DIR__ . '/widgets/Team.php';
 		require_once __DIR__ . '/widgets/Testimonial.php';
+		require_once __DIR__ . '/widgets/Pricing_Table.php';
 	}
 
 	/**
@@ -277,6 +271,7 @@ final class EliteKit {
 		$widgets = array(
 			'Team',
 			'Testimonial',
+			'Pricing_Table',
 		);
 
 		foreach ( $widgets as $widget ) {

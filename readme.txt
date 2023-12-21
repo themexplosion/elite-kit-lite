@@ -4,7 +4,7 @@ Tags: elementor, elements, addons, elementor addons, elementor widget, elementor
 Requires at least: 5.4
 Requires PHP: 7.4
 Tested up to: 6.3
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,7 @@ The plugin is optimized for better performance. We follow the best practices to 
 
 - Team member widget
 - Testimonial widget
+- Pricing Table widget
 
 More features and improvements are about to be released in future updates.
 
@@ -51,6 +52,9 @@ Of course! It will work with any theme where Elementor works.
 
 
 == Changelog ==
+
+= 1.0.2 - 16/12/2023 =
+- New: Added new widget "Pricing Table"
 
 = 1.0.1 - 16/12/2023 =
 - New: Added new widget "Testimonial"
