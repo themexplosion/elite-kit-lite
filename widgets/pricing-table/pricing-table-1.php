@@ -16,8 +16,8 @@
 			<?php endif; ?>
 			<?php if ( 'yes' === $settings['pt_show_subtitle'] && ! empty( $this->render_pricing_subtitle() ) ) : ?>
 				<span class="subtitle">
-            <?php echo wp_kses( $this->render_pricing_subtitle(), \EliteKit\Helpers\Utils::get_kses_text() ); ?>
-        </span>
+				<?php echo wp_kses( $this->render_pricing_subtitle(), \EliteKit\Helpers\Utils::get_kses_text() ); ?>
+		</span>
 			<?php endif; ?>
 		</div>
 		<?php endif; ?>

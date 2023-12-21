@@ -2,11 +2,17 @@
 /**
  * Plugin Name:       Elite Kit Elementor Addons
  * Plugin URI:        https://wordpress.org/plugins/elite-kit/
- * Description:       The Elite plugin you install after Elementor plugin. It adds a lot of new Elementor widgets to the Elementor Page Builder. Backed by the power of Elite Kit Framework. Highly
- * optimized for super fast loading and instant Live editing. Version:           1.0.1 Author:            Themexplosion Author URI:        https://themexplosion.com License:           GPL v2 or later
- * Text Domain:       elite-kit Domain Path:       /languages/ WC tested up to: 8.0.2 Elementor tested up to: 3.15.3 Elementor Pro tested up to: 3.15.1
+ * Description:       The Elite plugin you install after Elementor plugin. It adds a lot of new Elementor widgets to the Elementor Page Builder. Backed by the power of Elite Kit Framework. Highly optimized for super fast loading and instant Live editing.
+ * Version:           1.0.2
+ * Author:            Themexplosion
+ * Author URI:        https://themexplosion.com
+ * License:           GPL v2 or later
+ * Text Domain:       elite-kit
+ * Domain Path:       /languages/
+ * WC tested up to: 8.0.2
+ * Elementor tested up to: 3.15.3
+ * Elementor Pro tested up to: 3.15.1
  */
-
 defined( 'ABSPATH' ) || exit;
 
 final class EliteKit {
@@ -20,8 +26,11 @@ final class EliteKit {
 	public function __construct() {
 		$this->init_plugin();
 		$this->define_constants();
+
 		load_plugin_textdomain( 'elite-kit', false, plugin_basename( __DIR__ ) . '/languages' );
+
 		$this->core_includes();
+
 		require_once ELITE_KIT_PATH . '/helpers/utils.php';
 	}
 

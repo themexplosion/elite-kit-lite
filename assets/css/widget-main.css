@@ -103,7 +103,7 @@
 	color: #1D1B4C;
 	line-height: 26px;
 	margin-bottom: 2px;
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .ek-team-area .team-wrapper:hover .team-title,
@@ -683,7 +683,7 @@
 }
 
 .ek-advance-pricing-table .ek-feature-wrapper ul{
-    padding:0;
+	padding:0;
 }
 
 .ek-advance-pricing-table .ek-feature-wrapper li {
@@ -815,7 +815,7 @@
 	bottom: -4px;
 	box-sizing: border-box;
 	border-width: 8px;
-    border-style: solid;
+	border-style: solid;
 	border-top-color: transparent;
 	transform: rotate(45deg);
 	border-bottom-color: #fff;
@@ -890,7 +890,7 @@
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 24px;
-    margin:0;
+	margin:0;
 }
 
 .ek-testimonial-area .ek-author-wrapper .ek-author-designation,

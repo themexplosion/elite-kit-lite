@@ -1,7 +1,6 @@
 .elite-kit-icon::after {
 	content: url('../images/themexplosion_logo.svg');
-    position: absolute;
-    right: 0;
-    top: 10px;
+	position: absolute;
+	right: 0;
+	top: 10px;
 }
-

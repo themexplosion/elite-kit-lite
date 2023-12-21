@@ -1688,7 +1688,6 @@ class Pricing_Table extends Widget_Base {
 			)
 		);
 
-
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
