@@ -5,7 +5,7 @@
  * Description:       The Elite plugin you install after Elementor plugin. It adds a lot of new Elementor widgets to the Elementor Page Builder. Backed by the power of Elite Kit Framework. Highly optimized for super fast loading and instant Live editing.
  * Version:           1.0.2
  * Author:            Themexplosion
- * Author URI:        https://plugins.themexplosion.com/elite-kit
+ * Author URI:        https://profiles.wordpress.org/themexplosion/
  * License:           GPL v2 or later
  * Text Domain:       elite-kit-lite
  * Domain Path:       /languages/
@@ -15,8 +15,8 @@
  */
 defined( 'ABSPATH' ) || exit;
 
-final class EliteKit {
 
+final class EliteKit {
 	const VERSION = '1.0.2';
 
 	const MINIMUM_ELEMENTOR_VERSION = '3.15.3';
@@ -114,7 +114,6 @@ final class EliteKit {
 	 */
 	public function register_elitekit_dependency_scripts() {
 		wp_register_script( 'fontawesome', ELITE_KIT_ASSETS . 'js/all.min.js', array(), '6.4.2 ', true );
-
 		wp_register_style( 'fontawesome-css', ELITE_KIT_ASSETS . 'css/all.min.css', array(), '6.4.2' );
 	}
 
