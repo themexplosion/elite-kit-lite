@@ -13,7 +13,7 @@ class Team extends Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Team', 'elite-kit' );
+		return esc_html__( 'Team', 'elite-kit-lite' );
 	}
 
 	public function get_icon() {
@@ -37,7 +37,7 @@ class Team extends Widget_Base {
 		$this->start_controls_section(
 			'member_info',
 			array(
-				'label' => esc_html__( 'Member Information', 'elite-kit' ),
+				'label' => esc_html__( 'Member Information', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -45,7 +45,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'member_image',
 			array(
-				'label'   => esc_html__( 'Choose Image', 'elite-kit' ),
+				'label'   => esc_html__( 'Choose Image', 'elite-kit-lite' ),
 				'type'    => \Elementor\Controls_Manager::MEDIA,
 				'default' => array(
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -69,9 +69,9 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'member_name',
 			array(
-				'label'       => esc_html__( 'Name', 'elite-kit' ),
+				'label'       => esc_html__( 'Name', 'elite-kit-lite' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => esc_html__( 'Elite Kit Member', 'elite-kit' ),
+				'default'     => esc_html__( 'Elite Kit Member', 'elite-kit-lite' ),
 				'label_block' => true,
 			)
 		);
@@ -79,9 +79,9 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'member_designation',
 			array(
-				'label'       => esc_html__( 'Designation', 'elite-kit' ),
+				'label'       => esc_html__( 'Designation', 'elite-kit-lite' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => esc_html__( 'Elite Kit Officer', 'elite-kit' ),
+				'default'     => esc_html__( 'Elite Kit Officer', 'elite-kit-lite' ),
 				'label_block' => true,
 			)
 		);
@@ -89,10 +89,10 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'member_description',
 			array(
-				'label'       => esc_html__( 'Description', 'elite-kit' ),
+				'label'       => esc_html__( 'Description', 'elite-kit-lite' ),
 				'type'        => \Elementor\Controls_Manager::TEXTAREA,
 				'rows'        => 4,
-				'placeholder' => esc_html__( 'Write something amazing about the elite kit member', 'elite-kit' ),
+				'placeholder' => esc_html__( 'Write something amazing about the elite kit member', 'elite-kit-lite' ),
 				'condition'   => array(
 					'layout_style' => 'team-1',
 				),
@@ -104,7 +104,7 @@ class Team extends Widget_Base {
 		$this->start_controls_section(
 			'member_socials',
 			array(
-				'label' => esc_html__( 'Social Profile', 'elite-kit' ),
+				'label' => esc_html__( 'Social Profile', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -114,7 +114,7 @@ class Team extends Widget_Base {
 		$repeater->add_control(
 			'social_icon',
 			array(
-				'label' => esc_html__( 'Social Icon', 'elite-kit' ),
+				'label' => esc_html__( 'Social Icon', 'elite-kit-lite' ),
 				'type'  => \Elementor\Controls_Manager::ICONS,
 			)
 		);
@@ -122,7 +122,7 @@ class Team extends Widget_Base {
 		$repeater->add_control(
 			'social_website_name',
 			array(
-				'label'       => esc_html__( 'Social Website Name', 'elite-kit' ),
+				'label'       => esc_html__( 'Social Website Name', 'elite-kit-lite' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
 				'label_block' => true,
 			)
@@ -131,7 +131,7 @@ class Team extends Widget_Base {
 		$repeater->add_control(
 			'social_link',
 			array(
-				'label'       => esc_html__( 'URL', 'elite-kit' ),
+				'label'       => esc_html__( 'URL', 'elite-kit-lite' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
 				'label_block' => true,
 			)
@@ -140,12 +140,12 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'member_social_icons',
 			array(
-				'label'       => esc_html__( 'Soicial Icons', 'elite-kit' ),
+				'label'       => esc_html__( 'Soicial Icons', 'elite-kit-lite' ),
 				'type'        => \Elementor\Controls_Manager::REPEATER,
 				'fields'      => $repeater->get_controls(),
 				'default'     => array(
 					array(
-						'social_website_name' => esc_html__( 'Facebook', 'elite-kit' ),
+						'social_website_name' => esc_html__( 'Facebook', 'elite-kit-lite' ),
 						'social_icon'         => array(
 							'value'   => 'fab fa-facebook-f',
 							'library' => 'solid',
@@ -153,7 +153,7 @@ class Team extends Widget_Base {
 						'social_link'         => '#',
 					),
 					array(
-						'social_website_name' => esc_html__( 'Twitter', 'elite-kit' ),
+						'social_website_name' => esc_html__( 'Twitter', 'elite-kit-lite' ),
 						'social_icon'         => array(
 							'value'   => 'fab fa-twitter',
 							'library' => 'solid',
@@ -161,7 +161,7 @@ class Team extends Widget_Base {
 						'social_link'         => '#',
 					),
 					array(
-						'social_website_name' => esc_html__( 'Instagram', 'elite-kit' ),
+						'social_website_name' => esc_html__( 'Instagram', 'elite-kit-lite' ),
 						'social_icon'         => array(
 							'value'   => 'fab fa-instagram',
 							'library' => 'solid',
@@ -169,7 +169,7 @@ class Team extends Widget_Base {
 						'social_link'         => '#',
 					),
 					array(
-						'social_website_name' => esc_html__( 'Behance', 'elite-kit' ),
+						'social_website_name' => esc_html__( 'Behance', 'elite-kit-lite' ),
 						'social_icon'         => array(
 							'value'   => 'fab fa-behance',
 							'library' => 'solid',
@@ -188,7 +188,7 @@ class Team extends Widget_Base {
 		$this->start_controls_section(
 			'member_style',
 			array(
-				'label' => esc_html__( 'Member style', 'elite-kit' ),
+				'label' => esc_html__( 'Member style', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -200,14 +200,14 @@ class Team extends Widget_Base {
 		$this->start_controls_tab(
 			'style_normal_tab',
 			array(
-				'label' => esc_html__( 'Normal', 'elite-kit' ),
+				'label' => esc_html__( 'Normal', 'elite-kit-lite' ),
 			)
 		);
 
 		$this->add_control(
 			'name_options',
 			array(
-				'label'     => esc_html__( 'Member Name', 'elite-kit' ),
+				'label'     => esc_html__( 'Member Name', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -216,7 +216,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'name_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-team-area .team-title' => 'color: {{VALUE}}',
@@ -235,7 +235,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'designation_options',
 			array(
-				'label'     => esc_html__( 'Designation', 'elite-kit' ),
+				'label'     => esc_html__( 'Designation', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -244,7 +244,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'text_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-team-area .team-position span' => 'color: {{VALUE}}',
@@ -263,7 +263,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'description_options',
 			array(
-				'label'     => esc_html__( 'Description', 'elite-kit' ),
+				'label'     => esc_html__( 'Description', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -272,7 +272,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'description_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-team-area .team-description span' => 'color: {{VALUE}}',
@@ -291,7 +291,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'meta_options',
 			array(
-				'label'     => esc_html__( 'Meta', 'elite-kit' ),
+				'label'     => esc_html__( 'Meta', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -300,7 +300,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'meta_hover_color',
 			array(
-				'label'     => esc_html__( 'Background Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Background Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-team-area .team-holder' => 'background-color: {{VALUE}}',
@@ -311,7 +311,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'meta_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'elite-kit' ),
+				'label'      => esc_html__( 'Padding', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -323,7 +323,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'social_options',
 			array(
-				'label'     => esc_html__( 'Social Icon', 'elite-kit' ),
+				'label'     => esc_html__( 'Social Icon', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -344,7 +344,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'icon_color',
 			array(
-				'label'     => esc_html__( 'Icon Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Icon Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-team-area .social-item a' => 'color: {{VALUE}}',
@@ -365,14 +365,14 @@ class Team extends Widget_Base {
 		$this->start_controls_tab(
 			'style_hover_tab',
 			array(
-				'label' => esc_html__( 'Hover', 'elite-kit' ),
+				'label' => esc_html__( 'Hover', 'elite-kit-lite' ),
 			)
 		);
 
 		$this->add_control(
 			'name_hover_options',
 			array(
-				'label'     => esc_html__( 'Member Name', 'elite-kit' ),
+				'label'     => esc_html__( 'Member Name', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -381,7 +381,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'name_hover_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-team-area .team-wrapper:hover .team-title' => 'color: {{VALUE}}',
@@ -392,7 +392,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'designation_hover_options',
 			array(
-				'label'     => esc_html__( 'Designation', 'elite-kit' ),
+				'label'     => esc_html__( 'Designation', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -401,7 +401,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'designation_hover_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-team-area .team-wrapper:hover span' => 'color: {{VALUE}}',
@@ -412,7 +412,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'meta_hover_options',
 			array(
-				'label'     => esc_html__( 'Meta', 'elite-kit' ),
+				'label'     => esc_html__( 'Meta', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -421,7 +421,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'meta_hover_bg_color',
 			array(
-				'label'     => esc_html__( 'Background Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Background Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-team-area .team-wrapper:hover .team-holder' => 'background-color: {{VALUE}}',
@@ -432,7 +432,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'meta_hover_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'elite-kit' ),
+				'label'      => esc_html__( 'Padding', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -444,7 +444,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'social_hover_options',
 			array(
-				'label'     => esc_html__( 'Social Icon', 'elite-kit' ),
+				'label'     => esc_html__( 'Social Icon', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -465,7 +465,7 @@ class Team extends Widget_Base {
 		$this->add_control(
 			'icon_hover_color',
 			array(
-				'label'     => esc_html__( 'Icon Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Icon Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-team-area .social-item a:hover' => 'color: {{VALUE}}',

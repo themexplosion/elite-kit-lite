@@ -5,9 +5,9 @@
  * Description:       The Elite plugin you install after Elementor plugin. It adds a lot of new Elementor widgets to the Elementor Page Builder. Backed by the power of Elite Kit Framework. Highly optimized for super fast loading and instant Live editing.
  * Version:           1.0.2
  * Author:            Themexplosion
- * Author URI:        https://themexplosion.com
+ * Author URI:        https://plugins.themexplosion.com/elite-kit
  * License:           GPL v2 or later
- * Text Domain:       elite-kit
+ * Text Domain:       elite-kit-lite
  * Domain Path:       /languages/
  * WC tested up to: 8.0.2
  * Elementor tested up to: 3.15.3
@@ -27,7 +27,7 @@ final class EliteKit {
 		$this->init_plugin();
 		$this->define_constants();
 
-		load_plugin_textdomain( 'elite-kit', false, plugin_basename( __DIR__ ) . '/languages' );
+		load_plugin_textdomain( 'elite-kit-lite', false, plugin_basename( __DIR__ ) . '/languages' );
 
 		$this->core_includes();
 
@@ -132,14 +132,14 @@ final class EliteKit {
 		if ( $this->is_plugin_installed( 'elementor/elementor.php' ) ) {
 			$activation_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=elementor/elementor.php&amp;plugin_status=all&amp;paged=1&amp;s', 'activate-plugin_elementor/elementor.php' );
 
-			$message = __( 'Elite Kit Addons for Elementor requires Elementor plugin to be active. Please activate Elementor to continue.', 'elite-kit' );
+			$message = __( 'Elite Kit Addons for Elementor requires Elementor plugin to be active. Please activate Elementor to continue.', 'elite-kit-lite' );
 
-			$button_text = __( 'Activate Elementor', 'elite-kit' );
+			$button_text = __( 'Activate Elementor', 'elite-kit-lite' );
 		} else {
 			$activation_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=elementor' ), 'install-plugin_elementor' );
 
-			$message     = __( 'Elite Kit Addons for Elementor  requires Elementor  plugin to be installed and activated. Please install Elementor to continue.', 'elite-kit' );
-			$button_text = __( 'Install Elementor', 'elite-kit' );
+			$message     = __( 'Elite Kit Addons for Elementor  requires Elementor  plugin to be installed and activated. Please install Elementor to continue.', 'elite-kit-lite' );
+			$button_text = __( 'Install Elementor', 'elite-kit-lite' );
 		}
 		?>
 
@@ -178,7 +178,7 @@ final class EliteKit {
 		?>
 		<div class="notice notice-warning is-dismissible">
 		<p>
-			<?php esc_html__( 'Elite Kit requires Elementor plugin version 3.15.3 or greater.', 'elite-kit' ); ?>
+			<?php esc_html__( 'Elite Kit requires Elementor plugin version 3.15.3 or greater.', 'elite-kit-lite' ); ?>
 		</p>
 		</div>
 		<?php
@@ -195,7 +195,7 @@ final class EliteKit {
 		?>
 		<div class="notice notice-warning is-dismissible">
 		<p>
-			<?php esc_html__( 'Elite Kit requires PHP version 7.4 or greater.', 'elite-kit' ); ?>
+			<?php esc_html__( 'Elite Kit requires PHP version 7.4 or greater.', 'elite-kit-lite' ); ?>
 		</p>
 		</div>
 		<?php
@@ -216,7 +216,7 @@ final class EliteKit {
 		$elements_manager->add_category(
 			$category_prefix . 'widgets',
 			array(
-				'title' => __( 'Elite Kit Widgets', 'elite-kit' ),
+				'title' => __( 'Elite Kit Widgets', 'elite-kit-lite' ),
 				'icon'  => 'fa fa-plug',
 			)
 		);

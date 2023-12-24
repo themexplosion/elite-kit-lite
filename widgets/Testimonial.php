@@ -13,7 +13,7 @@ class Testimonial extends Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Testimonial', 'elite-kit' );
+		return esc_html__( 'Testimonial', 'elite-kit-lite' );
 	}
 
 	public function get_icon() {
@@ -47,7 +47,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'tm_quote_sec',
 			array(
-				'label' => esc_html__( 'Review/Quote', 'elite-kit' ),
+				'label' => esc_html__( 'Review/Quote', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -55,7 +55,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tm_quote_icon',
 			array(
-				'label'   => esc_html__( 'Quote Icon', 'elite-kit' ),
+				'label'   => esc_html__( 'Quote Icon', 'elite-kit-lite' ),
 				'type'    => \Elementor\Controls_Manager::ICONS,
 				'default' => array(
 					'value'   => 'fas fa-quote-left',
@@ -67,10 +67,10 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tm_quote',
 			array(
-				'label'   => esc_html__( 'Review Text', 'elite-kit' ),
+				'label'   => esc_html__( 'Review Text', 'elite-kit-lite' ),
 				'type'    => \Elementor\Controls_Manager::TEXTAREA,
 				'rows'    => 4,
-				'default' => esc_html__( ' The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century.', 'elite-kit' ),
+				'default' => esc_html__( ' The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century.', 'elite-kit-lite' ),
 			)
 		);
 
@@ -79,7 +79,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'tm_user_data',
 			array(
-				'label' => esc_html__( 'Author information', 'elite-kit' ),
+				'label' => esc_html__( 'Author information', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -87,7 +87,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tm_user_image',
 			array(
-				'label'   => esc_html__( 'Author picture', 'elite-kit' ),
+				'label'   => esc_html__( 'Author picture', 'elite-kit-lite' ),
 				'type'    => \Elementor\Controls_Manager::MEDIA,
 				'default' => array(
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -98,19 +98,19 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tm_user_name',
 			array(
-				'label'   => esc_html__( 'Name of the author', 'elite-kit' ),
+				'label'   => esc_html__( 'Name of the author', 'elite-kit-lite' ),
 				'type'    => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Jhone Doe', 'elite-kit' ),
+				'default' => esc_html__( 'Jhone Doe', 'elite-kit-lite' ),
 			)
 		);
 
 		$this->add_control(
 			'tm_user_designation',
 			array(
-				'label'       => esc_html__( 'Author designation', 'elite-kit' ),
+				'label'       => esc_html__( 'Author designation', 'elite-kit-lite' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => esc_html__( 'CEO', 'elite-kit' ),
-				'placeholder' => esc_html__( 'e.g - CEO, Manager, Market etc.', 'elite-kit' ),
+				'default'     => esc_html__( 'CEO', 'elite-kit-lite' ),
+				'placeholder' => esc_html__( 'e.g - CEO, Manager, Market etc.', 'elite-kit-lite' ),
 			)
 		);
 
@@ -119,7 +119,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'tm_rating',
 			array(
-				'label' => esc_html__( 'Rating', 'elite-kit' ),
+				'label' => esc_html__( 'Rating', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -127,7 +127,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'rating_value',
 			array(
-				'label'   => esc_html__( 'Rating', 'elite-kit' ),
+				'label'   => esc_html__( 'Rating', 'elite-kit-lite' ),
 				'type'    => \Elementor\Controls_Manager::NUMBER,
 				'min'     => 0,
 				'max'     => 5,
@@ -146,7 +146,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'tc_additional_settings',
 			array(
-				'label' => esc_html__( 'Additional Settings', 'elite-kit' ),
+				'label' => esc_html__( 'Additional Settings', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -161,10 +161,10 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tc_is_quote_icon',
 			array(
-				'label'        => esc_html__( 'Show Quote Icon', 'elite-kit' ),
+				'label'        => esc_html__( 'Show Quote Icon', 'elite-kit-lite' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Show', 'elite-kit' ),
-				'label_off'    => esc_html__( 'Hide', 'elite-kit' ),
+				'label_on'     => esc_html__( 'Show', 'elite-kit-lite' ),
+				'label_off'    => esc_html__( 'Hide', 'elite-kit-lite' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -180,10 +180,10 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tc_is_author_name',
 			array(
-				'label'        => esc_html__( 'Show Name', 'elite-kit' ),
+				'label'        => esc_html__( 'Show Name', 'elite-kit-lite' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Show', 'elite-kit' ),
-				'label_off'    => esc_html__( 'Hide', 'elite-kit' ),
+				'label_on'     => esc_html__( 'Show', 'elite-kit-lite' ),
+				'label_off'    => esc_html__( 'Hide', 'elite-kit-lite' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -199,10 +199,10 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tc_is_job_title',
 			array(
-				'label'        => esc_html__( 'Show Job Title', 'elite-kit' ),
+				'label'        => esc_html__( 'Show Job Title', 'elite-kit-lite' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Show', 'elite-kit' ),
-				'label_off'    => esc_html__( 'Hide', 'elite-kit' ),
+				'label_on'     => esc_html__( 'Show', 'elite-kit-lite' ),
+				'label_off'    => esc_html__( 'Hide', 'elite-kit-lite' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -218,10 +218,10 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tc_is_rating',
 			array(
-				'label'        => esc_html__( 'Show Rating', 'elite-kit' ),
+				'label'        => esc_html__( 'Show Rating', 'elite-kit-lite' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Show', 'elite-kit' ),
-				'label_off'    => esc_html__( 'Hide', 'elite-kit' ),
+				'label_on'     => esc_html__( 'Show', 'elite-kit-lite' ),
+				'label_off'    => esc_html__( 'Hide', 'elite-kit-lite' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -230,12 +230,12 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tc_rating_position',
 			array(
-				'label'     => esc_html__( 'Rating Position', 'elite-kit' ),
+				'label'     => esc_html__( 'Rating Position', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::SELECT,
 				'default'   => 'before_review_text',
 				'options'   => array(
-					'before_review_text' => esc_html__( 'Before Review text', 'elite-kit' ),
-					'after_review_text'  => esc_html__( 'After Review text', 'elite-kit' ),
+					'before_review_text' => esc_html__( 'Before Review text', 'elite-kit-lite' ),
+					'after_review_text'  => esc_html__( 'After Review text', 'elite-kit-lite' ),
 				),
 				'condition' => array(
 					'layout_style' => 'testimonial-2',
@@ -254,10 +254,10 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tc_is_review_text',
 			array(
-				'label'        => esc_html__( 'Show Review Text', 'elite-kit' ),
+				'label'        => esc_html__( 'Show Review Text', 'elite-kit-lite' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Show', 'elite-kit' ),
-				'label_off'    => esc_html__( 'Hide', 'elite-kit' ),
+				'label_on'     => esc_html__( 'Show', 'elite-kit-lite' ),
+				'label_off'    => esc_html__( 'Hide', 'elite-kit-lite' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -273,10 +273,10 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tc_is_author_image',
 			array(
-				'label'        => esc_html__( 'Show Author Image', 'elite-kit' ),
+				'label'        => esc_html__( 'Show Author Image', 'elite-kit-lite' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Show', 'elite-kit' ),
-				'label_off'    => esc_html__( 'Hide', 'elite-kit' ),
+				'label_on'     => esc_html__( 'Show', 'elite-kit-lite' ),
+				'label_off'    => esc_html__( 'Hide', 'elite-kit-lite' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -288,7 +288,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'tc_item_box_style',
 			array(
-				'label'     => esc_html__( 'Items', 'elite-kit' ),
+				'label'     => esc_html__( 'Items', 'elite-kit-lite' ),
 				'tab'       => \Elementor\Controls_Manager::TAB_STYLE,
 				'condition' => array(
 					'layout_style' => 'testimonial-2',
@@ -303,26 +303,26 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_tab(
 			'tc_item_box_normal_tab',
 			array(
-				'label' => esc_html__( 'Normal', 'elite-kit' ),
+				'label' => esc_html__( 'Normal', 'elite-kit-lite' ),
 			)
 		);
 
 		$this->add_control(
 			'tc__item_text_align',
 			array(
-				'label'     => esc_html__( 'Alignment', 'elite-kit' ),
+				'label'     => esc_html__( 'Alignment', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::CHOOSE,
 				'options'   => array(
 					'left'   => array(
-						'title' => esc_html__( 'Left', 'elite-kit' ),
+						'title' => esc_html__( 'Left', 'elite-kit-lite' ),
 						'icon'  => 'eicon-text-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'elite-kit' ),
+						'title' => esc_html__( 'Center', 'elite-kit-lite' ),
 						'icon'  => 'eicon-text-align-center',
 					),
 					'right'  => array(
-						'title' => esc_html__( 'Right', 'elite-kit' ),
+						'title' => esc_html__( 'Right', 'elite-kit-lite' ),
 						'icon'  => 'eicon-text-align-right',
 					),
 				),
@@ -338,7 +338,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Background::get_type(),
 			array(
 				'name'     => 'tc_item_box_background',
-				'label'    => esc_html__( 'Background Box', 'elite-kit' ),
+				'label'    => esc_html__( 'Background Box', 'elite-kit-lite' ),
 				'types'    => array( 'classic', 'gradient' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area-2 .ek-testimonial-wrapper',
 			)
@@ -348,7 +348,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Border::get_type(),
 			array(
 				'name'     => 'tc_normal_item_border',
-				'label'    => esc_html__( 'Border', 'elite-kit' ),
+				'label'    => esc_html__( 'Border', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area-2 .ek-testimonial-wrapper',
 			)
 		);
@@ -356,7 +356,7 @@ class Testimonial extends Widget_Base {
 		$this->add_responsive_control(
 			'tc_item_border_radius',
 			array(
-				'label'      => esc_html__( 'Border radius', 'elite-kit' ),
+				'label'      => esc_html__( 'Border radius', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -369,7 +369,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'tc_normal_item_box_shadow',
-				'label'    => esc_html__( 'Box Shadow', 'elite-kit' ),
+				'label'    => esc_html__( 'Box Shadow', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area-2 .ek-testimonial-wrapper',
 			)
 		);
@@ -377,7 +377,7 @@ class Testimonial extends Widget_Base {
 		$this->add_responsive_control(
 			'tc_item_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'elite-kit' ),
+				'label'      => esc_html__( 'Padding', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -399,7 +399,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Background::get_type(),
 			array(
 				'name'     => 'tc_hover_item_box_background',
-				'label'    => esc_html__( 'Background Box', 'elite-kit' ),
+				'label'    => esc_html__( 'Background Box', 'elite-kit-lite' ),
 				'types'    => array( 'classic', 'gradient' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area-2 .ek-testimonial-wrapper:hover',
 			)
@@ -409,7 +409,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Border::get_type(),
 			array(
 				'name'     => 'tc_hover_item_border',
-				'label'    => esc_html__( 'Border', 'elite-kit' ),
+				'label'    => esc_html__( 'Border', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area-2 .ek-testimonial-wrapper',
 			)
 		);
@@ -418,7 +418,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'tc_item_hover_box_shadow',
-				'label'    => esc_html__( 'Box Shadow', 'elite-kit' ),
+				'label'    => esc_html__( 'Box Shadow', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area-2 .ek-testimonial-wrapper:hover',
 			)
 		);
@@ -430,7 +430,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'quote_box_style',
 			array(
-				'label'     => esc_html__( 'Quote Box Style', 'elite-kit' ),
+				'label'     => esc_html__( 'Quote Box Style', 'elite-kit-lite' ),
 				'tab'       => \Elementor\Controls_Manager::TAB_STYLE,
 				'condition' => array(
 					'layout_style' => 'testimonial-1',
@@ -445,26 +445,26 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_tab(
 			'box_normal_style',
 			array(
-				'label' => esc_html__( 'Normal', 'elite-kit' ),
+				'label' => esc_html__( 'Normal', 'elite-kit-lite' ),
 			)
 		);
 
 		$this->add_control(
 			'content_alignment',
 			array(
-				'label'     => esc_html__( 'Alignment', 'elite-kit' ),
+				'label'     => esc_html__( 'Alignment', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::CHOOSE,
 				'options'   => array(
 					'left'   => array(
-						'title' => esc_html__( 'Left', 'elite-kit' ),
+						'title' => esc_html__( 'Left', 'elite-kit-lite' ),
 						'icon'  => 'eicon-text-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'elite-kit' ),
+						'title' => esc_html__( 'Center', 'elite-kit-lite' ),
 						'icon'  => 'eicon-text-align-center',
 					),
 					'right'  => array(
-						'title' => esc_html__( 'Right', 'elite-kit' ),
+						'title' => esc_html__( 'Right', 'elite-kit-lite' ),
 						'icon'  => 'eicon-text-align-right',
 					),
 				),
@@ -479,7 +479,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'box_bg_color',
 			array(
-				'label'     => esc_html__( 'Background Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Background Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .ek-quote-box'        => 'background: {{VALUE}}',
@@ -492,7 +492,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Border::get_type(),
 			array(
 				'name'     => 'box_border',
-				'label'    => esc_html__( 'Border', 'elite-kit' ),
+				'label'    => esc_html__( 'Border', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .ek-quote-box',
 			)
 		);
@@ -500,7 +500,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'box_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'elite-kit' ),
+				'label'      => esc_html__( 'Border Radius', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -513,7 +513,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'box_normal_shadow',
-				'label'    => esc_html__( 'Box Shadow', 'elite-kit' ),
+				'label'    => esc_html__( 'Box Shadow', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .ek-quote-box',
 			)
 		);
@@ -521,7 +521,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'box_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'elite-kit' ),
+				'label'      => esc_html__( 'Padding', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -533,7 +533,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'space_between_quote_box',
 			array(
-				'label'      => esc_html__( 'Space Between', 'elite-kit' ),
+				'label'      => esc_html__( 'Space Between', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -561,14 +561,14 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_tab(
 			'box_hover_style',
 			array(
-				'label' => esc_html__( 'Hover', 'elite-kit' ),
+				'label' => esc_html__( 'Hover', 'elite-kit-lite' ),
 			)
 		);
 
 		$this->add_control(
 			'box_hover_bg_color',
 			array(
-				'label'     => esc_html__( 'Background Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Background Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper:hover .ek-quote-box'        => 'background: {{VALUE}}',
@@ -581,7 +581,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Border::get_type(),
 			array(
 				'name'     => 'box_hover_border',
-				'label'    => esc_html__( 'Border', 'elite-kit' ),
+				'label'    => esc_html__( 'Border', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper:hover .ek-quote-box',
 			)
 		);
@@ -590,7 +590,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'box_hover_shadow',
-				'label'    => esc_html__( 'Box Shadow', 'elite-kit' ),
+				'label'    => esc_html__( 'Box Shadow', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper:hover .ek-quote-box',
 			)
 		);
@@ -605,7 +605,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'tc_quote_icon_style',
 			array(
-				'label'     => esc_html__( 'Quote Icon', 'elite-kit' ),
+				'label'     => esc_html__( 'Quote Icon', 'elite-kit-lite' ),
 				'tab'       => \Elementor\Controls_Manager::TAB_STYLE,
 				'condition' => array(
 					'layout_style'     => 'testimonial-1',
@@ -617,7 +617,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'quote_icon_color',
 			array(
-				'label'     => esc_html__( 'Icon Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Icon Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .ek-quote-icon i' => 'color: {{VALUE}}',
@@ -628,7 +628,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'quote_icon_hover_color',
 			array(
-				'label'     => esc_html__( 'Icon Hover Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Icon Hover Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper:hover .ek-quote-icon i' => 'color: {{VALUE}}',
@@ -639,7 +639,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'quote_icon_size',
 			array(
-				'label'      => esc_html__( 'Icon Size', 'elite-kit' ),
+				'label'      => esc_html__( 'Icon Size', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -665,7 +665,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'quote_svg_option',
 			array(
-				'label'     => esc_html__( 'SVG', 'elite-kit' ),
+				'label'     => esc_html__( 'SVG', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -674,7 +674,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'quote_svg_size_width',
 			array(
-				'label'      => esc_html__( 'SVG Size Width', 'elite-kit' ),
+				'label'      => esc_html__( 'SVG Size Width', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -700,7 +700,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'quote_svg_size_height',
 			array(
-				'label'      => esc_html__( 'SVG Size', 'elite-kit' ),
+				'label'      => esc_html__( 'SVG Size', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -726,7 +726,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'space_quote',
 			array(
-				'label'      => esc_html__( 'Space Between', 'elite-kit' ),
+				'label'      => esc_html__( 'Space Between', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -755,7 +755,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'tc_author_image',
 			array(
-				'label' => esc_html__( 'Image', 'elite-kit' ),
+				'label' => esc_html__( 'Image', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -763,7 +763,7 @@ class Testimonial extends Widget_Base {
 		$this->add_responsive_control(
 			'author_image_size',
 			array(
-				'label'      => esc_html__( 'Image Size', 'elite-kit' ),
+				'label'      => esc_html__( 'Image Size', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -789,7 +789,7 @@ class Testimonial extends Widget_Base {
 		$this->add_responsive_control(
 			'author_image_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'elite-kit' ),
+				'label'      => esc_html__( 'Border Radius', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -801,7 +801,7 @@ class Testimonial extends Widget_Base {
 		$this->add_group_control(
 			\Elementor\Group_Control_Border::get_type(),
 			array(
-				'label'    => esc_html__( 'Border', 'elite-kit' ),
+				'label'    => esc_html__( 'Border', 'elite-kit-lite' ),
 				'name'     => 'tc_image_border',
 				'selector' => '{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .ek-author-img img',
 			)
@@ -810,7 +810,7 @@ class Testimonial extends Widget_Base {
 		$this->add_responsive_control(
 			'tc_author_img_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'elite-kit' ),
+				'label'      => esc_html__( 'Padding', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -822,7 +822,7 @@ class Testimonial extends Widget_Base {
 		$this->add_responsive_control(
 			'author_image_gap',
 			array(
-				'label'      => esc_html__( 'Space Between', 'elite-kit' ),
+				'label'      => esc_html__( 'Space Between', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -864,10 +864,10 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'image_offset_toggle',
 			array(
-				'label'        => __( 'Offset', 'elite-kit' ),
+				'label'        => __( 'Offset', 'elite-kit-lite' ),
 				'type'         => \Elementor\Controls_Manager::POPOVER_TOGGLE,
-				'label_off'    => __( 'None', 'elite-kit' ),
-				'label_on'     => __( 'Custom', 'elite-kit' ),
+				'label_off'    => __( 'None', 'elite-kit-lite' ),
+				'label_on'     => __( 'Custom', 'elite-kit-lite' ),
 				'return_value' => 'yes',
 			)
 		);
@@ -877,7 +877,7 @@ class Testimonial extends Widget_Base {
 		$this->add_responsive_control(
 			'image_horizontal_offset',
 			array(
-				'label'     => esc_html__( 'Horizontal', 'elite-kit' ),
+				'label'     => esc_html__( 'Horizontal', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::SLIDER,
 				'range'     => array(
 					'px' => array(
@@ -897,7 +897,7 @@ class Testimonial extends Widget_Base {
 		$this->add_responsive_control(
 			'image_vertical_offset',
 			array(
-				'label'     => esc_html__( 'Vertical', 'elite-kit' ),
+				'label'     => esc_html__( 'Vertical', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::SLIDER,
 				'range'     => array(
 					'px' => array(
@@ -922,7 +922,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'author_style',
 			array(
-				'label' => esc_html__( 'Author Style', 'elite-kit' ),
+				'label' => esc_html__( 'Author Style', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -934,14 +934,14 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_tab(
 			'author_normal_tabs',
 			array(
-				'label' => esc_html__( 'Normal', 'elite-kit' ),
+				'label' => esc_html__( 'Normal', 'elite-kit-lite' ),
 			)
 		);
 
 		$this->add_control(
 			'author_name_option',
 			array(
-				'label'     => esc_html__( 'Author Name', 'elite-kit' ),
+				'label'     => esc_html__( 'Author Name', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -950,7 +950,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'author_name_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .ek-author-details .ek-name' => 'color: {{VALUE}}',
@@ -962,7 +962,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'author_name_typography',
-				'label'    => esc_html__( 'Typography', 'elite-kit' ),
+				'label'    => esc_html__( 'Typography', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .ek-author-details .ek-name',
 			)
 		);
@@ -970,7 +970,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'author_designation_option',
 			array(
-				'label'     => esc_html__( 'Author Designation', 'elite-kit' ),
+				'label'     => esc_html__( 'Author Designation', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -979,7 +979,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'author_designation_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .ek-author-details .ek-author-designation' => 'color: {{VALUE}}',
@@ -991,7 +991,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'author_designation_typography',
-				'label'    => esc_html__( 'Typography', 'elite-kit' ),
+				'label'    => esc_html__( 'Typography', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .ek-author-details .ek-author-designation',
 			)
 		);
@@ -999,7 +999,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'author_details_gap',
 			array(
-				'label'      => esc_html__( 'Space Between', 'elite-kit' ),
+				'label'      => esc_html__( 'Space Between', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -1025,7 +1025,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'author_box_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'elite-kit' ),
+				'label'      => esc_html__( 'Padding', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -1039,14 +1039,14 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_tab(
 			'author_hover_tabs',
 			array(
-				'label' => esc_html__( 'Hover', 'elite-kit' ),
+				'label' => esc_html__( 'Hover', 'elite-kit-lite' ),
 			)
 		);
 
 		$this->add_control(
 			'author_name_hover_option',
 			array(
-				'label'     => esc_html__( 'Author Name', 'elite-kit' ),
+				'label'     => esc_html__( 'Author Name', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1055,7 +1055,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'author_name_hover_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper:hover .ek-author-details .ek-name' => 'color: {{VALUE}}',
@@ -1066,7 +1066,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'author_designation_hover_option',
 			array(
-				'label'     => esc_html__( 'Author Designation', 'elite-kit' ),
+				'label'     => esc_html__( 'Author Designation', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1075,7 +1075,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'author_designation_hover_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper:hover .ek-author-details .ek-author-designation' => 'color: {{VALUE}}',
@@ -1093,7 +1093,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'quote_text_style',
 			array(
-				'label' => esc_html__( 'Text', 'elite-kit' ),
+				'label' => esc_html__( 'Text', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -1101,7 +1101,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'quote_text_normal_color',
 			array(
-				'label'     => esc_html__( 'Quote Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Quote Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .quote' => 'color: {{VALUE}}',
@@ -1112,7 +1112,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'quote_text_hover_color',
 			array(
-				'label'     => esc_html__( 'Hover Text Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Hover Text Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper:hover .quote' => 'color: {{VALUE}}',
@@ -1124,7 +1124,7 @@ class Testimonial extends Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'quote_text_typography',
-				'label'    => esc_html__( 'Quote Typography', 'elite-kit' ),
+				'label'    => esc_html__( 'Quote Typography', 'elite-kit-lite' ),
 				'selector' => '{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .quote',
 			)
 		);
@@ -1132,7 +1132,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'tc_text_space',
 			array(
-				'label'      => esc_html__( 'Space Between', 'elite-kit' ),
+				'label'      => esc_html__( 'Space Between', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -1160,7 +1160,7 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'tm_rating_sec',
 			array(
-				'label' => esc_html__( 'Rating', 'elite-kit' ),
+				'label' => esc_html__( 'Rating', 'elite-kit-lite' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -1172,14 +1172,14 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_tab(
 			'tm_rating_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'elite-kit' ),
+				'label' => esc_html__( 'Normal', 'elite-kit-lite' ),
 			)
 		);
 
 		$this->add_control(
 			'tm_rating_icon_color',
 			array(
-				'label'     => esc_html__( 'Icon Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Icon Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper .ek-rating i' => 'color: {{VALUE}}',
@@ -1190,7 +1190,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'rating_icon_size',
 			array(
-				'label'      => esc_html__( 'Icon Size', 'elite-kit' ),
+				'label'      => esc_html__( 'Icon Size', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -1216,7 +1216,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'rating_icon_space',
 			array(
-				'label'      => esc_html__( 'Space Between Rating', 'elite-kit' ),
+				'label'      => esc_html__( 'Space Between Rating', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -1242,7 +1242,7 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 			'rating_space',
 			array(
-				'label'      => esc_html__( 'Space Between', 'elite-kit' ),
+				'label'      => esc_html__( 'Space Between', 'elite-kit-lite' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -1270,14 +1270,14 @@ class Testimonial extends Widget_Base {
 		$this->start_controls_tab(
 			'tm_rating_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'elite-kit' ),
+				'label' => esc_html__( 'Hover', 'elite-kit-lite' ),
 			)
 		);
 
 		$this->add_control(
 			'tm_rating_icon_hover_color',
 			array(
-				'label'     => esc_html__( 'Icon Color', 'elite-kit' ),
+				'label'     => esc_html__( 'Icon Color', 'elite-kit-lite' ),
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .ek-testimonial-area .ek-testimonial-wrapper:hover .ek-rating i' => 'color: {{VALUE}}',
