@@ -104,7 +104,7 @@ final class EliteKit {
 	 */
 
 	public function elite_kit_admin_scripts() {
-		wp_enqueue_style( 'elite-kit-admin', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), self::VERSION );
+		wp_enqueue_style( 'elite-kit-admin', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), ELITE_KIT_VERSION );
 	}
 
 	/**
@@ -244,7 +244,7 @@ final class EliteKit {
 	 *
 	 */
 	public function enqueue_widget_styles() {
-		wp_enqueue_style( 'elite-kit-widget', plugins_url( 'assets/css/widget-main.css', __FILE__ ), array(), self::VERSION );
+		wp_enqueue_style( 'elite-kit-widget', plugins_url( 'assets/css/widget-main.css', __FILE__ ), array(), ELITE_KIT_VERSION ); //TODO: @momin, add tailwind
 	}
 
 	/**
@@ -255,7 +255,7 @@ final class EliteKit {
 	 * @access public
 	 */
 	public function register_widget_scripts() {
-		wp_enqueue_style( 'elite-kit-elementor-editor', plugins_url( 'assets/css/elementor-editor.css', __FILE__ ) );
+		wp_enqueue_style( 'elite-kit-elementor-editor', plugins_url( 'assets/css/elementor-editor.css', __FILE__ ), array(), ELITE_KIT_VERSION );
 	}
 
 	/**
@@ -304,3 +304,4 @@ final class EliteKit {
 EliteKit::instance();
 
 //TODO: Show some messages if pro plugin is installed but not activated
+//TODO: In the admin menu, show 'pro' right beside settings and plugin info,like essential addons
